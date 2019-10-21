@@ -90,4 +90,4 @@ Final <- subset(Final, School.Level=='Elementary')
 Final$School.Level <- NULL
 
 #Write Final to CSV
-write.csv(Final,'Final.csv')
+write.csv(Final,'Merged.csv')
