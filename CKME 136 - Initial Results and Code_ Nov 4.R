@@ -506,7 +506,10 @@ NROW(Final)
 ##########################################################################################
 
 #Write Clean to CSV
-write.csv(Final,'Clean.csv')
+#write.csv(Final,'Clean.csv')
+
+#Write Clean to TXT, tab-delimited
+write.table(Final,"Clean.txt",sep="\t",row.names=FALSE)
 
 ############################################################################
 # Scale non-percentage numeric values as a precursor to quantile factoring #
@@ -602,8 +605,11 @@ levels(Final$Enrol_sum_4to6) <- c("Lowest","Low","Medium","High","Highest")
 # Write the factored dataframe to file for future use
 ##########################################################################################
 
-#Write Clean to CSV
-write.csv(Final,'Factored.csv')
+#Write Final to CSV
+#write.csv(Final,'Factored.csv')
+#Write Clean to TXT, tab-delimited
+write.table(Final,"Factored.txt",sep="\t",row.names=FALSE)
+
 
 #Create transactions dataset from Final
 trans_Final <- as (Final, "transactions")
